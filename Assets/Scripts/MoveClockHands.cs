@@ -29,18 +29,24 @@ public class MoveClockHands : MonoBehaviour
         realTime = System.DateTime.Now;
         if(timeType == WhichHand.Hour)
         {
-            handRotation = 360 * realTime.Hour / 12;
-            Debug.Log("Hour handRotation is " + handRotation);
+            handRotation = 360 * realTime.Hour / 12+30*realTime.Minute/60;
+            //Debug.Log("Hour handRotation is " + handRotation);
+            transform.localEulerAngles = new Vector3(0, 0, -handRotation);
+            
         }
         else if (timeType == WhichHand.Minute)
         {
             handRotation = 360 * realTime.Minute / 60;
-            Debug.Log("Minute handRotation is " + handRotation);
+           //Debug.Log("Minute handRotation is " + handRotation);
+            transform.localEulerAngles = new Vector3(0, 0, -handRotation);
+            
         }
         else //Second
         {
             handRotation = 360 * realTime.Second / 60;
-            Debug.Log("Second handRotation is " + handRotation);
+            //Debug.Log("Second handRotation is " + handRotation);
+            transform.localEulerAngles = new Vector3(0, 0, -handRotation);
+            
         }
     }
 }

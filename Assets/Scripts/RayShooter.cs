@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿//Lisa Ice
+//lice@cnm.edu
+//Game Development, CIS 2250
+//UIA Chapter 3 Assignment
+//Created 2/6/21
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +12,8 @@ public class RayShooter : MonoBehaviour
 {
 
     private Camera _camera;
-    public int SizeOfCursor = 12;
-    public float SizeOfSphereIndicator = 1.0f;
+    public int sizeOfCursor = 12;
+    public float sizeOfSphereIndicator = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +50,7 @@ public class RayShooter : MonoBehaviour
     {
         GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         sphere.transform.position = pos;
-        Vector3 scale = new Vector3(SizeOfSphereIndicator / 10.0f, SizeOfSphereIndicator / 10.0f, SizeOfSphereIndicator / 10.0f);
+        Vector3 scale = new Vector3(sizeOfSphereIndicator / 10.0f, sizeOfSphereIndicator / 10.0f, sizeOfSphereIndicator / 10.0f);
         sphere.transform.localScale = scale;
         yield return new WaitForSeconds(1);
 
@@ -53,7 +59,7 @@ public class RayShooter : MonoBehaviour
 
     private void OnGUI()
     {
-        int size = SizeOfCursor;
+        int size = sizeOfCursor;
         float posX = _camera.pixelWidth / 2 - size / 4;
         float posY = _camera.pixelHeight / 2 - size / 2;
         GUI.Label(new Rect(posX, posY, size, size), $"<size={size}>*</size>");

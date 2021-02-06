@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿//Lisa Ice
+//lice@cnm.edu
+//Game Development, CIS 2250
+//UIA Chapter 3 Assignment
+//Created 2/6/21
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
